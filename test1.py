@@ -1,8 +1,14 @@
 #!C:\Users\user\AppData\Local\Programs\Python\Python312\python.exe
 
 import cgi
-form = cgi.FieldStorage()
 
+from http.server import HTTPServer, CGIHTTPRequestHandler
+server_address = ("", 8000)
+httpd = HTTPServer(server_address, CGIHTTPRequestHandler)
+httpd.serve_forever()
+
+
+form = cgi.FieldStorage()
     
 n = int(form.getfirst('n',2))
 text = str(form.getfirst('s',"1 2 3 4"))
