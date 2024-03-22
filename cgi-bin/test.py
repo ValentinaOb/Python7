@@ -1,11 +1,6 @@
-#!C:\Users\user\AppData\Local\Programs\Python\Python312\python.exe
-
+#C:\Users\user\AppData\Local\Programs\Python\Python312\python.exe
+#!/usr/bin/env python3
 import cgi
-
-from http.server import HTTPServer, CGIHTTPRequestHandler
-server_address = ("", 3000)
-httpd = HTTPServer(server_address, CGIHTTPRequestHandler)
-httpd.serve_forever()
 
 form = cgi.FieldStorage()
 
